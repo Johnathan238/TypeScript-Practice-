@@ -34,10 +34,14 @@ hobbies = ['Football', 'Cooking', 'Cars']
 
 // ! complex types typeof : object only !
 // ! Lowercase only !
-let person: {
+
+// ? Type Aliases = Not to repeat code again !
+type Person =  {
   name: string
   age: number
 }
+
+let person: Person;
 
 person = {
   name: "Freshyy",
@@ -46,10 +50,7 @@ person = {
 
 // ! complex types typeof : array of object !
 // ! Lowercase only !
-let people: {
-  name: string
-  age: number
-}[]
+let people: Person[]
 
 // ? Type inference
 let course: string | number = "Angular - The Complete Guide"
@@ -57,4 +58,14 @@ let course: string | number = "Angular - The Complete Guide"
 course = 19045
 
 
+// ? Function & types
+function add(a: number, b: number) {
+  return a + b
+}
 
+function printOutput(value: any) {
+  console.log(value);
+}
+
+
+// ? Generics
