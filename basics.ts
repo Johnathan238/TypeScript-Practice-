@@ -52,7 +52,7 @@ let people: {
 }[]
 
 // ? Type inference
-let course = "Angular - The Complete Guide"
+let course: string | number = "Angular - The Complete Guide"
 
 course = 19045
 
