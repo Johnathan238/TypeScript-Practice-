@@ -69,3 +69,36 @@ function printOutput(value: any) {
 
 
 // ? Generics
+function inersertAtBegining<T>(array: T[], value: T) {
+  const newArr = [value, ...array]
+  return newArr
+}
+
+const demoArr = [1, 2, 3]
+ 
+const updatedArr = inersertAtBegining(demoArr, -1) // ~ [-1, 1, 2, 3]
+
+// updatedArr[0].split('')
+
+// ? Classes 
+class Student {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public age: number,
+    private courseName: string[]
+  ) { }
+  
+  enroll(courseName) {
+    this.courseName.push(courseName)
+  }
+
+  listCourses() {
+    return this.courseName.slice()
+  }
+}
+
+const newStudent = new Student('Freshyy', 'Wayne', 1600, ['Angular'])
+newStudent.enroll('TypeScript')
+
+
