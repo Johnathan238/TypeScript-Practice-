@@ -101,4 +101,23 @@ class Student {
 const newStudent = new Student('Freshyy', 'Wayne', 1600, ['Angular'])
 newStudent.enroll('TypeScript')
 
+// ? Interfaces
+interface Human {
+  firstName: string
+  age: number
+
+  greet: () => void
+}
+
+let freshyy: Human
+
+freshyy = {
+  firstName: 'Freshyy',
+  age: 1600,
+  
+  greet() {
+    console.log("IM 1600");
+  }
+}
+
 
